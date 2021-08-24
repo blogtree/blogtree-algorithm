@@ -2,7 +2,7 @@ import lombok.ToString;
 import org.junit.Test;
 
 /**
- * {@Link https://leetcode-cn.com/problems/add-two-numbers/}
+ * @see <a href="https://leetcode-cn.com/problems/add-two-numbers/"></a>
  */
 public class No2两数相加 extends BaseTest {
 
