@@ -4,7 +4,7 @@ import org.junit.Test;
 /**
  * @see <a href="https://leetcode-cn.com/problems/add-two-numbers/"></a>
  */
-public class No2两数相加 extends BaseTest {
+public class No2_两数相加 extends BaseTest {
 
     @Test
     public void test1() {

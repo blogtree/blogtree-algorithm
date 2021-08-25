@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @see <a href="https://leetcode-cn.com/problems/two-sum/"></a>
  */
-public class No1两数之和 extends BaseTest {
+public class No1_两数之和 extends BaseTest {
 
     @Test
     public void test1() {

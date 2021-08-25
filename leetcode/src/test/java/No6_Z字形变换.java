@@ -8,7 +8,7 @@ import java.util.List;
  * <p>
  * 题目：将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。
  */
-public class No6Z字形变换 {
+public class No6_Z字形变换 {
 
     @Test
     public void test() {

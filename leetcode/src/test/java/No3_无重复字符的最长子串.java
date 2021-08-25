@@ -7,7 +7,7 @@ import org.junit.Test;
  * <p>
  * 注意：此解法比较慢，后续需要优化
  */
-public class No3无重复字符的最长子串 {
+public class No3_无重复字符的最长子串 {
 
     @Test
     public void test1() {
