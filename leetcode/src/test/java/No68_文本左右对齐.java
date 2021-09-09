@@ -17,10 +17,13 @@ public class No68_文本左右对齐 {
 
     @Test
     public void test2() {
+        log.info("{}", fullJustify(new String[]{"What", "must", "be", "acknowledgment", "shall", "be"}, 16));
     }
 
     @Test
     public void test3() {
+        log.info("{}", fullJustify(new String[]{"Science", "is", "what", "we", "understand", "well", "enough", "to",
+                "explain", "to", "a", "computer.", "Art", "is", "everything", "else", "we", "do"}, 20));
     }
 
     public List<String> fullJustify(String[] words, int maxWidth) {
@@ -31,9 +34,24 @@ public class No68_文本左右对齐 {
         for (int i = 0; i < words.length; i++) {
             String word = words[i];
             int addStep = (rowWidth == 0) ? word.length() : 1 + word.length();
-            if (rowWidth + addStep < maxWidth) {
+            if (rowWidth + addStep <= maxWidth) {
                 rowStrList.add(word);
                 rowWidth += addStep;
+                if (i == words.length - 1) {
+                    // 最后一行
+                    builder = new StringBuilder();
+                    for (int j = 0; j < rowStrList.size(); j++) {
+                        builder.append(rowStrList.get(j));
+                        if (j != rowStrList.size() - 1) {
+                            builder.append(" ");
+                        }
+                    }
+                    int addNum = maxWidth - builder.length();
+                    for (int j = 0; j < addNum; j++) {
+                        builder.append(" ");
+                    }
+                    resList.add(builder.toString());
+                }
             } else {
                 // 超出一行时，先计算剩余空格数量
                 builder = new StringBuilder();
@@ -48,7 +66,9 @@ public class No68_文本左右对齐 {
                     int numFront = residue % (rowStrList.size() - 1);
                     for (int j = 0; j < rowStrList.size(); j++) {
                         builder.append(rowStrList.get(j));
-                        if (j == rowStrList.size() - 1) {
+                        if (j < rowStrList.size() - 1) {
+                            builder.append(" ");
+                        } else {
                             break;
                         }
                         for (int k = 0; k < numEvery; k++) {
@@ -59,14 +79,11 @@ public class No68_文本左右对齐 {
                         }
                     }
                 }
-
-
                 resList.add(builder.toString());
                 // clear
                 rowStrList = new LinkedList<>();
                 rowWidth = 0;
-                rowStrList.add(word);
-                rowWidth += addStep;
+                i--;
             }
         }
         return resList;
