@@ -25,11 +25,13 @@ public class No594_最长和谐子序列 {
         if (nums.length == 1) {
             return 0;
         }
+
         HashMap<Integer, Integer> map = new HashMap<>();
         int res = 0;
         for (int num : nums) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
+
         for (Integer key : map.keySet()) {
             if (map.containsKey(key + 1)) {
                 res = Math.max(res, map.get(key) + map.get(key + 1));
