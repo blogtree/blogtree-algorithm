@@ -2,4 +2,4 @@
 Share the algorithm of leetcode
 
 ## Member
-AlanGeeker alangeeker@outlook.com
+[AlanGeeker](https://github.com/AlanGeeker) alangeeker@outlook.com
