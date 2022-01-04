@@ -10,4 +10,4 @@ Share Algorithm
 
 ## Member
 
-[AlanGeeker](https://github.com/AlanGeeker) alangeeker@outlook.com
+[AlanGeeker](https://github.com/AlanGeeker)
