@@ -1,4 +1,4 @@
-import lombok.ToString;
+import org.blogtree.algorithm.structure.ListNode;
 import org.junit.Test;
 
 /**
@@ -9,8 +9,8 @@ public class No2_两数相加 extends BaseTest {
     @Test
     public void test1() {
         Solution solution = new Solution();
-        ListNode l1 = new ListNode(new int[]{2, 4, 3});
-        ListNode l2 = new ListNode(new int[]{5, 6, 4});
+        ListNode l1 = ListNode.buildList(new int[]{2, 4, 3});
+        ListNode l2 = ListNode.buildList(new int[]{5, 6, 4});
         Object res = solution.addTwoNumbers(l1, l2);
         log.info("res={}", res);
     }
@@ -18,44 +18,11 @@ public class No2_两数相加 extends BaseTest {
     @Test
     public void test2() {
         Solution solution = new Solution();
-        ListNode l1 = new ListNode(new int[]{9, 9, 9, 9, 9, 9, 9});
-        ListNode l2 = new ListNode(new int[]{9, 9, 9, 9});
+        ListNode l1 = ListNode.buildList(new int[]{9, 9, 9, 9, 9, 9, 9});
+        ListNode l2 = ListNode.buildList(new int[]{9, 9, 9, 9});
         solution.addTwoNumbers(l1, l2);
     }
 
-
-    @ToString
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        ListNode(int[] valArr) {
-            if (valArr.length == 0) {
-                return;
-            }
-            ListNode currentNode = this;
-            for (int i = 0; i < valArr.length; i++) {
-                currentNode.val = valArr[i];
-                if (i < valArr.length - 1) {
-                    ListNode nextNode = new ListNode();
-                    currentNode.next = nextNode;
-                    currentNode = nextNode;
-                }
-            }
-        }
-    }
 
     class Solution {
         public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

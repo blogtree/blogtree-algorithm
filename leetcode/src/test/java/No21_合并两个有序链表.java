@@ -1,4 +1,5 @@
 import lombok.extern.slf4j.Slf4j;
+import org.blogtree.algorithm.structure.ListNode;
 import org.junit.Test;
 
 /**
@@ -47,27 +48,5 @@ public class No21_合并两个有序链表 {
             l3 = l3.next;
         }
         return result.next;
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public ListNode setNext(int val) {
-            next = new ListNode(val);
-            return next;
-        }
     }
 }

@@ -1,6 +1,7 @@
 package sword_to_offer;
 
 import lombok.extern.slf4j.Slf4j;
+import org.blogtree.algorithm.structure.ListNode;
 import org.junit.Test;
 
 /**
@@ -12,7 +13,7 @@ public class No22_链表中倒数第k个节点 {
     @Test
     public void test1() {
         ListNode head = new ListNode(1);
-        head.append(2).append(3).append(4).append(5);
+        head.setNext(2).setNext(3).setNext(4).setNext(5);
         ListNode res = getKthFromEnd(head, 2);
         assert 4 == res.val;
     }
@@ -38,20 +39,5 @@ public class No22_链表中倒数第k个节点 {
         }
 
         return after;
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        public ListNode append(int val) {
-            ListNode next = new ListNode(val);
-            this.next = next;
-            return this.next;
-        }
     }
 }

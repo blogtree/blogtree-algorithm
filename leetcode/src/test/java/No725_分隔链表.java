@@ -1,4 +1,5 @@
 import lombok.extern.slf4j.Slf4j;
+import org.blogtree.algorithm.structure.ListNode;
 import org.junit.Test;
 
 /**
@@ -10,15 +11,15 @@ public class No725_分隔链表 {
     @Test
     public void test1() {
         ListNode head = new ListNode(1);
-        head.append(2).append(3);
+        head.setNext(2).setNext(3);
         ListNode[] arr = splitListToParts(head, 5);
     }
 
     @Test
     public void test2() {
         ListNode head = new ListNode(1);
-        head.append(2).append(3).append(4).append(5)
-                .append(6).append(7).append(8).append(9).append(10);
+        head.setNext(2).setNext(3).setNext(4).setNext(5)
+                .setNext(6).setNext(7).setNext(8).setNext(9).setNext(10);
         ListNode[] arr = splitListToParts(head, 3);
     }
 
@@ -74,28 +75,5 @@ public class No725_分隔链表 {
             i++;
         }
         return arr;
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public ListNode append(int val) {
-            ListNode node = new ListNode(val);
-            this.next = node;
-            return node;
-        }
     }
 }

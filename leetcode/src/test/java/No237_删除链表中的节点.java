@@ -1,4 +1,5 @@
 import lombok.extern.slf4j.Slf4j;
+import org.blogtree.algorithm.structure.ListNode;
 import org.junit.Test;
 
 /**
@@ -32,19 +33,5 @@ public class No237_删除链表中的节点 {
     public void deleteNode(ListNode node) {
         node.val = node.next.val;
         node.next = node.next.next;
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        public ListNode append(int val) {
-            this.next = new ListNode(val);
-            return this.next;
-        }
     }
 }
