@@ -73,9 +73,9 @@ public class NC1_大数加法 {
         // 遍历两个字符数组
         for (int i = charsLong.length - 1, j = charsShort.length - 1; i >= 0; i--, j--) {
             if (j >= 0) {
-                sum = charsLong[i] - '0' + charsShort[j] - '0';
+                sum = Character.digit(charsLong[i], 10) + Character.digit(charsShort[j], 10);
             } else {
-                sum = charsLong[i] - '0';
+                sum = Character.digit(charsLong[i], 10);
             }
             // 加上进位
             sum += addNum;
@@ -89,7 +89,7 @@ public class NC1_大数加法 {
             }
         }
 
-        return addNum == 1 ? "1" + String.valueOf(charsLong) : String.valueOf(charsLong);
+        return (addNum == 1 ? "1" : "") + String.valueOf(charsLong);
     }
 
     /**
