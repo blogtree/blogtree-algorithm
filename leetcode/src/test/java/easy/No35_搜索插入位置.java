@@ -32,21 +32,21 @@ public class No35_搜索插入位置 {
      * 分析：通过二分查找来快速定位到
      */
     public int searchInsert(int[] nums, int target) {
-        int min = 0;
-        int max = nums.length - 1;
-        while (min <= max) {
-            int mid = (max - min) / 2 + min;
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            int mid = (right - left) / 2 + left;
             if (nums[mid] == target) {
                 // 直接返回
                 return mid;
             } else if (nums[mid] > target) {
                 // 大于目标值
-                max = mid - 1;
+                right = mid - 1;
             } else if (nums[mid] < target) {
                 // 小于目标值
-                min = mid + 1;
+                left = mid + 1;
             }
         }
-        return min;
+        return left;
     }
 }
