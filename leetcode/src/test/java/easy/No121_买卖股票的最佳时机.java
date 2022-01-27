@@ -5,6 +5,8 @@ import org.junit.Test;
 
 /**
  * @see <a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/"></a>
+ *
+ * 数组 动态规划
  */
 @Slf4j
 public class No121_买卖股票的最佳时机 {
