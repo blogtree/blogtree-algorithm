@@ -1,4 +1,5 @@
 import lombok.extern.slf4j.Slf4j;
+import org.blogtree.algorithm.structure.TreeNode;
 import org.junit.Test;
 
 /**
@@ -72,27 +73,5 @@ public class No563_二叉树的坡度 {
             sum += addNum;
         }
 
-    }
-
-    /**
-     * Definition for a binary tree node.
-     */
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

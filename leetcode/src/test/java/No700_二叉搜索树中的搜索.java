@@ -1,4 +1,5 @@
 import lombok.extern.slf4j.Slf4j;
+import org.blogtree.algorithm.structure.TreeNode;
 import org.junit.Test;
 
 import java.util.Stack;
@@ -37,24 +38,5 @@ public class No700_二叉搜索树中的搜索 {
             }
         }
         return null;
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

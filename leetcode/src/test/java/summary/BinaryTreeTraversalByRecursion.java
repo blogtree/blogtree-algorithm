@@ -1,6 +1,7 @@
 package summary;
 
 import lombok.extern.slf4j.Slf4j;
+import org.blogtree.algorithm.structure.TreeNode;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -21,22 +22,6 @@ import java.util.List;
  */
 @Slf4j
 public class BinaryTreeTraversalByRecursion {
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-
-        public TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     private TreeNode getBinaryTreeRoot() {
         TreeNode node4 = new TreeNode(4);
