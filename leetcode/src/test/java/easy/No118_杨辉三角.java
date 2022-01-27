@@ -20,6 +20,8 @@ public class No118_杨辉三角 {
 
     @Test
     public void test2() {
+        List res = generate(33);
+        print(res);
     }
 
     @Test
@@ -28,7 +30,7 @@ public class No118_杨辉三角 {
 
     private void print(List res) {
         for (int i = 0; i < res.size(); i++) {
-            log.info("rowNo={}, row={}", i + 1, res.get(i));
+            log.info("rowNo={}, row={}", i, res.get(i));
         }
     }
 
