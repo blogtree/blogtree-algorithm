@@ -5,6 +5,7 @@ import org.junit.Test;
 
 /**
  * @see <a href="https://leetcode-cn.com/problems/reverse-prefix-of-word/"></a>
+ * 双指针 字符串
  */
 @Slf4j
 public class No2000_反转单词前缀 {
