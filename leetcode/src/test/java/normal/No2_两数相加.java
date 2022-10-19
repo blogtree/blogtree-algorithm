@@ -1,5 +1,6 @@
 package normal;
 
+import org.blogtree.algorithm.base.BaseTest;
 import org.blogtree.algorithm.structure.ListNode;
 import org.junit.Test;
 

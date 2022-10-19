@@ -1,5 +1,6 @@
 package normal;
 
+import org.blogtree.algorithm.base.BaseTest;
 import org.junit.Test;
 
 import java.util.HashMap;
