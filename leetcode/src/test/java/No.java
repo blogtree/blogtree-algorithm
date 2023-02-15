@@ -21,10 +21,6 @@ public class No {
 
     /**
      * 标签：
-     * 分析：
-     * 1
-     * 2
-     * 3
      */
     public void fun() {
 
