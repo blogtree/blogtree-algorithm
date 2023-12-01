@@ -9,6 +9,13 @@ import org.junit.Test;
 @Slf4j
 public class No {
 
+    /**
+     * 标签：
+     */
+    public void fun() {
+
+    }
+
     @Test
     public void test1() {
     }
@@ -21,12 +28,7 @@ public class No {
     public void test3() {
     }
 
-    /**
-     * 标签：
-     */
-    public void fun() {
 
-    }
 }
 
 
