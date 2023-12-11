@@ -1,4 +1,4 @@
-package easy.array;
+package label.array.easy;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class No463_岛屿的周长 {
     }
 
     /**
-     * 标签：
+     * 标签：数组
      */
     public int islandPerimeter(int[][] grid) {
         int perimeter = 0;

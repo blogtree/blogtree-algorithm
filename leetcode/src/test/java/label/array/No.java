@@ -1,4 +1,4 @@
-package easy;
+package label.array;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.junit.Test;
 public class No {
 
     /**
-     * 标签：
+     * 标签：数组
      */
     public void fun() {
 
