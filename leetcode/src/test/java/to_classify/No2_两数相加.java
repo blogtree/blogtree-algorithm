@@ -9,23 +9,6 @@ import org.junit.Test;
  */
 public class No2_两数相加 extends BaseTest {
 
-    @Test
-    public void test1() {
-        Solution solution = new Solution();
-        ListNode l1 = ListNode.buildList(new int[]{2, 4, 3});
-        ListNode l2 = ListNode.buildList(new int[]{5, 6, 4});
-        Object res = solution.addTwoNumbers(l1, l2);
-        log.info("res={}", res);
-    }
-
-    @Test
-    public void test2() {
-        Solution solution = new Solution();
-        ListNode l1 = ListNode.buildList(new int[]{9, 9, 9, 9, 9, 9, 9});
-        ListNode l2 = ListNode.buildList(new int[]{9, 9, 9, 9});
-        solution.addTwoNumbers(l1, l2);
-    }
-
 
     class Solution {
         public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -61,5 +44,22 @@ public class No2_两数相加 extends BaseTest {
         public void appendToL3(int sum, ListNode l3) {
             l3.next = new ListNode(sum > 9 ? sum - 10 : sum);
         }
+    }
+
+    @Test
+    public void test1() {
+        Solution solution = new Solution();
+        ListNode l1 = ListNode.buildList(new int[]{2, 4, 3});
+        ListNode l2 = ListNode.buildList(new int[]{5, 6, 4});
+        Object res = solution.addTwoNumbers(l1, l2);
+        log.info("res={}", res);
+    }
+
+    @Test
+    public void test2() {
+        Solution solution = new Solution();
+        ListNode l1 = ListNode.buildList(new int[]{9, 9, 9, 9, 9, 9, 9});
+        ListNode l2 = ListNode.buildList(new int[]{9, 9, 9, 9});
+        solution.addTwoNumbers(l1, l2);
     }
 }
