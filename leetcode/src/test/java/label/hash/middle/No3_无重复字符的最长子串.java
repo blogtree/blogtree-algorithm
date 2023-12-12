@@ -1,4 +1,4 @@
-package to_classify;
+package label.hash.middle;
 
 import org.junit.Test;
 
@@ -11,36 +11,9 @@ import org.junit.Test;
  */
 public class No3_无重复字符的最长子串 {
 
-    @Test
-    public void test1() {
-        assert 3 == lengthOfLongestSubstring("abcabcbb");
-    }
-
-    @Test
-    public void test2() {
-        assert 1 == lengthOfLongestSubstring("a");
-    }
-
-    @Test
-    public void test3() {
-        assert 2 == lengthOfLongestSubstring("ab");
-    }
-
-    @Test
-    public void test4() {
-        assert 1 == lengthOfLongestSubstring(" ");
-    }
-
-    @Test
-    public void test5() {
-        assert 3 == lengthOfLongestSubstring("pwwkew");
-    }
-
-    @Test
-    public void test6() {
-        assert 3 == lengthOfLongestSubstring("dvdf");
-    }
-
+    /**
+     * 标签：哈希表 字符串 滑动窗口
+     */
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) {
             return 0;
@@ -71,5 +44,35 @@ public class No3_无重复字符的最长子串 {
             }
         }
         return maxLength;
+    }
+
+    @Test
+    public void test1() {
+        assert 3 == lengthOfLongestSubstring("abcabcbb");
+    }
+
+    @Test
+    public void test2() {
+        assert 1 == lengthOfLongestSubstring("a");
+    }
+
+    @Test
+    public void test3() {
+        assert 2 == lengthOfLongestSubstring("ab");
+    }
+
+    @Test
+    public void test4() {
+        assert 1 == lengthOfLongestSubstring(" ");
+    }
+
+    @Test
+    public void test5() {
+        assert 3 == lengthOfLongestSubstring("pwwkew");
+    }
+
+    @Test
+    public void test6() {
+        assert 3 == lengthOfLongestSubstring("dvdf");
     }
 }

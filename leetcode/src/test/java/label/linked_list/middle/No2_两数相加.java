@@ -1,4 +1,4 @@
-package to_classify;
+package label.linked_list.middle;
 
 import org.blogtree.algorithm.base.BaseTest;
 import org.blogtree.algorithm.structure.ListNode;
@@ -9,7 +9,9 @@ import org.junit.Test;
  */
 public class No2_两数相加 extends BaseTest {
 
-
+    /**
+     * 标签：递归 链表 数学
+     */
     class Solution {
         public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
             ListNode l3 = new ListNode();

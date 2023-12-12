@@ -1,4 +1,4 @@
-package to_classify;
+package label.array.middle;
 
 import org.junit.Test;
 
@@ -11,31 +11,9 @@ import java.util.*;
  */
 public class No4_寻找两个正序数组的中位数 {
 
-    @Test
-    public void test1() {
-        assert 2 == findMedianSortedArrays(new int[]{1, 3}, new int[]{2});
-    }
-
-    @Test
-    public void test2() {
-        assert 2.5 == findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4});
-    }
-
-    @Test
-    public void test3() {
-        assert 0 == findMedianSortedArrays(new int[]{0, 0}, new int[]{0, 0});
-    }
-
-    @Test
-    public void test4() {
-        assert 1.0 == findMedianSortedArrays(new int[]{}, new int[]{1});
-    }
-
-    @Test
-    public void test5() {
-        assert 2.0 == findMedianSortedArrays(new int[]{2}, new int[]{});
-    }
-
+    /**
+     * 标签：数组 二分查找 分治
+     */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         List<Integer> totalNums = new LinkedList<Integer>();
         if (nums1.length == 0 && nums2.length == 0) {
@@ -64,5 +42,30 @@ public class No4_寻找两个正序数组的中位数 {
             median = totalNums.get((totalNums.size() - 1) / 2);
         }
         return median;
+    }
+
+    @Test
+    public void test1() {
+        assert 2 == findMedianSortedArrays(new int[]{1, 3}, new int[]{2});
+    }
+
+    @Test
+    public void test2() {
+        assert 2.5 == findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4});
+    }
+
+    @Test
+    public void test3() {
+        assert 0 == findMedianSortedArrays(new int[]{0, 0}, new int[]{0, 0});
+    }
+
+    @Test
+    public void test4() {
+        assert 1.0 == findMedianSortedArrays(new int[]{}, new int[]{1});
+    }
+
+    @Test
+    public void test5() {
+        assert 2.0 == findMedianSortedArrays(new int[]{2}, new int[]{});
     }
 }

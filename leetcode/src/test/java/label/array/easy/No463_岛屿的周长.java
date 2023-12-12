@@ -9,21 +9,6 @@ import org.junit.Test;
 @Slf4j
 public class No463_岛屿的周长 {
 
-    @Test
-    public void test1() {
-        assert 16 == islandPerimeter(new int[][]{{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0}});
-        assert 4 == islandPerimeter(new int[][]{{1}});
-        assert 4 == islandPerimeter(new int[][]{{1, 0}});
-    }
-
-    @Test
-    public void test2() {
-    }
-
-    @Test
-    public void test3() {
-    }
-
     /**
      * 标签：数组
      */
@@ -52,6 +37,21 @@ public class No463_岛屿的周长 {
             }
         }
         return perimeter;
+    }
+
+    @Test
+    public void test1() {
+        assert 16 == islandPerimeter(new int[][]{{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0}});
+        assert 4 == islandPerimeter(new int[][]{{1}});
+        assert 4 == islandPerimeter(new int[][]{{1, 0}});
+    }
+
+    @Test
+    public void test2() {
+    }
+
+    @Test
+    public void test3() {
     }
 }
 
